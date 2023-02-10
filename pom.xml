@@ -8,11 +8,11 @@
         <version>3.0.2</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>actor.excercise</groupId>
+    <groupId>actor.exercise</groupId>
     <artifactId>actor_spring_exercise</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>actor_spring_excercise</name>
-    <description>actor_spring_excercise</description>
+    <name>actor_spring_exercise</name>
+    <description>actor_spring_exercise</description>
     <properties>
         <java.version>17</java.version>
     </properties>
