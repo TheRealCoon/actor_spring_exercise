@@ -1,13 +1,11 @@
 package actor.exercise.actor_spring_exercise.controller;
 
+import actor.exercise.actor_spring_exercise.model.Actor;
 import actor.exercise.actor_spring_exercise.service.ActorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 @RequestMapping("actors")
@@ -30,5 +28,12 @@ public class ActorController {
                            @RequestParam("specialSkill") String specialSkill){
         actorService.addActor(name, famousRole, specialSkill);
         return "redirect:/actors";
+    }
+
+    @GetMapping("/{id}")
+    public String getActor(@PathVariable("id") int id, Model model){
+        Actor actor = actorService.findActorById(id);
+        model.addAttribute("actor", actor);
+        return "actor";
     }
 }
