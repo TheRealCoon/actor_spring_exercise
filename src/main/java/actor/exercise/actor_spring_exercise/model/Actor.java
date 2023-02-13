@@ -1,5 +1,6 @@
 package actor.exercise.actor_spring_exercise.model;
 
+import actor.exercise.actor_spring_exercise.dto.ActorDto;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
@@ -10,4 +11,10 @@ public class Actor {
     private String name;
     private String famousRole;
     private String specialSkill;
+
+    public Actor(ActorDto actorDto) {
+        this.name = actorDto.getName();
+        this.famousRole = actorDto.getFamousRole();
+        this.specialSkill = actorDto.getSpecialSkill();
+    }
 }
