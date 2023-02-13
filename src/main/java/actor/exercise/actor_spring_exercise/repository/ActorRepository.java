@@ -1,22 +1,20 @@
 package actor.exercise.actor_spring_exercise.repository;
 
 import actor.exercise.actor_spring_exercise.model.Actor;
+import lombok.Getter;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
 
+@Getter
 @Repository
 public class ActorRepository {
     private List<Actor> actors = new ArrayList<>() {{
         add(new Actor(1, "Bud Spencer", "Piedone", "big punches"));
         add(new Actor(2, "Terrence Hill", "Nobody", "being annoying"));
     }};
-
-    public List<Actor> getActors() {
-        return actors;
-    }
 
     public void addActor(Actor actor) {
         actor.setId(actors.get(actors.size() - 1).getId() + 1);
