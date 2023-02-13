@@ -2,20 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link th:href="@{/css/style.css}" rel="stylesheet"/>
     <title>Actor</title>
 </head>
 <body>
-    <table>
-        <tr>
-            <th>Name</th>
-            <th>Famous role</th>
-            <th>Special skill</th>
-        </tr>
-        <tr>
-            <td th:text="${actor.getName()}"></td>
-            <td th:text="${actor.getFamousRole()}"></td>
-            <td th:text="${actor.getSpecialSkill()}"></td>
-        </tr>
-    </table>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Famous role</th>
+        <th>Special skill</th>
+        <th>Best Movie</th>
+    </tr>
+    <tr>
+        <td th:text="${actor.getName()}"></td>
+        <td th:text="${actor.getFamousRole()}"></td>
+        <td th:text="${actor.getSpecialSkill()}"></td>
+        <td th:text="${actor.getBestMovie()}"></td>
+    </tr>
+</table>
+<h1>
+    <a href="/actors">Back</a>
+</h1>
 </body>
 </html>

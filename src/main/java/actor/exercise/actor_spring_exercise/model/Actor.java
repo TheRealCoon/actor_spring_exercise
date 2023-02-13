@@ -11,10 +11,12 @@ public class Actor {
     private String name;
     private String famousRole;
     private String specialSkill;
+    private String bestMovie;
 
     public Actor(ActorDto actorDto) {
         this.name = actorDto.getName();
         this.famousRole = actorDto.getFamousRole();
         this.specialSkill = actorDto.getSpecialSkill();
+        this.bestMovie = actorDto.getBestMovie();
     }
 }

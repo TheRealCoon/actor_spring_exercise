@@ -12,8 +12,8 @@ import java.util.NoSuchElementException;
 @Repository
 public class ActorRepository {
     private List<Actor> actors = new ArrayList<>() {{
-        add(new Actor(1, "Bud Spencer", "Piedone", "big punches"));
-        add(new Actor(2, "Terrence Hill", "Nobody", "being annoying"));
+        add(new Actor(1, "Bud Spencer", "Piedone", "big punches", "Kincs ami nincs"));
+        add(new Actor(2, "Terrence Hill", "Nobody", "being annoying", "Alkesz pap"));
     }};
 
     public void addActor(Actor actor) {

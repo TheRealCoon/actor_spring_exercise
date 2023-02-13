@@ -25,8 +25,9 @@ public class ActorController {
     @PostMapping
     public String addActor(@RequestParam("name") String name,
                            @RequestParam("famousRole") String famousRole,
-                           @RequestParam("specialSkill") String specialSkill){
-        actorService.addActor(name, famousRole, specialSkill);
+                           @RequestParam("specialSkill") String specialSkill,
+                            @RequestParam("bestMovie") String bestMovie){
+        actorService.addActor(name, famousRole, specialSkill, bestMovie);
         return "redirect:/actors";
     }
 

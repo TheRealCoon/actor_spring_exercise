@@ -22,8 +22,8 @@ public class ActorService {
         return actorRepository.getActors();
     }
 
-    public void addActor(String name, String famousRole, String specialSkill) {
-        actorRepository.addActor(new Actor(new ActorDto(name, famousRole, specialSkill)));
+    public void addActor(String name, String famousRole, String specialSkill, String bestMovie) {
+        actorRepository.addActor(new Actor(new ActorDto(name, famousRole, specialSkill, bestMovie)));
     }
 
     public Actor findActorById(int id){
